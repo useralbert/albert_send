@@ -1,0 +1,10 @@
+{"book2018":
+    { 
+        "host": "localhost", 
+        "port": 3306, 
+        "user": "Fred", 
+        "password": "Pq1w3e5s", 
+        "database": "goodreads", 
+        "connectionLimit": 4 
+    }
+    }

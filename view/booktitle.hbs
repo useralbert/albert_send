@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>booktitles</title>
+    </head>
+    <body>
+        <div>
+            <h2>Letter {{q}}</h2>
+            {{#if noResult}}
+                <h2>Your query of '<code>{{ q }}</code>' returns no result</h2>
+            {{else}}
+                {{#each}}
+
+                    <li><a href="/bookinfo:{{this}}" target="_blank">{{this}}</a></li>
+
+                {{/each}}
+            {{/each}}
+        </div>
+
+        <div>   
+            <form method="GET" action="/search">
+                <input type="hidden" name="q" value="{{q}}">
+                <input type="hidden" name="offset" value="{{prev_pg}}">
+                <input type="hidden" name="count" value="{{count}}">
+                <button type="submit" {{disable_prev}}>Previous</button>
+            </form>
+            <form method="GET" action="/search">
+                <input type="hidden" name="q" value="{{q}}">
+                <input type="hidden" name="offset" value="{{next_pg}}">
+                <input type="hidden" name="count" value="{{count}}">
+                <button type="submit" {{disable_next}}>Next</button>
+            </form>
+        </div>
+
+    </body>
+</html>

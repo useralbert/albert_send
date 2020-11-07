@@ -1,6 +1,7 @@
 {
-  "name": "standard",
+  "name": "standardtype",
   "version": "1.0.0",
+  "description": "",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -8,11 +9,7 @@
   "author": "useralbert",
   "license": "ISC",
   "dependencies": {
-    "git": "^0.1.5"
-  },
-  "devDependencies": {},
-  "keywords": [
-    "main.js"
-  ],
-  "description": ""
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  }
 }
